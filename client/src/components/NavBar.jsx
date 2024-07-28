@@ -23,7 +23,9 @@ export default function NavBar() {
           alt="Logo représentant deux toits de maisons stylisés en noir avec des fenêtres blanches, au-dessus d'une courbe bleue symbolisant une rivière"
         />
       </Link>
-      <h1 className="Titre-Stab">Stab&apos; Alp</h1>
+      <Link to={`/`}>
+        <h1 className="Titre-Stab">Stab&apos; Alp</h1>
+      </Link>
       <h3 className="Sous-titre-nav">
         Laurent Pineau - Conseiller bâtiment d&apos;élevage depuis 1996
       </h3>

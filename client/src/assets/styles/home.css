@@ -1,0 +1,33 @@
+main {
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+}
+
+.mainContainer {
+  height: calc(100svh - 80px);
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-image {
+  display: block;
+  height: 100%;
+}
+
+.title-main-home {
+  width: auto;
+  position: absolute;
+  bottom: 47px;
+  z-index: 20;
+  font-family: var(--main-font);
+  color: var(--black);
+  background-color: var(--grey);
+  padding: 2rem 1rem;
+  left: 5%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--black);
+}

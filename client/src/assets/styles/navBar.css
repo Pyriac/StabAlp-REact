@@ -1,0 +1,72 @@
+header {
+  background-color: var(--grey);
+  color: var(--black);
+  justify-content: space-between;
+  width: 100vw;
+  overflow: hidden;
+  position: absolute;
+  z-index: 20;
+  top: 0%;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+}
+
+.Titre-Stab {
+  color: var(--blue);
+  font-family: var(--title-font);
+  font-weight: 500;
+  margin: 0.5rem 1rem;
+}
+
+.Sous-titre-nav {
+  display: none;
+}
+
+.logo {
+  margin: 1vw 2vw;
+  width: 100px;
+  display: none;
+}
+
+.menuNav {
+  display: none;
+  opacity: 0;
+  height: 0;
+}
+.menuNav-show {
+  display: flex;
+  opacity: 1;
+  height: 188px;
+  background-color: rgba(var(--grey), 0.9);
+  flex-direction: column;
+}
+
+.menuNav-show > a {
+  width: 90vw;
+  color: var(--black);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 1rem;
+  display: block;
+
+  border-bottom: 1px solid var(--blue-light);
+}
+
+.menuNav > a:first-child {
+  border-top: 1px solid var(--blue-light);
+}
+
+.menuNav > a:last-child {
+  border-bottom: none;
+}
+
+.list {
+  fill: var(--blue);
+  width: 2rem;
+  margin: 0.5rem;
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 0.8rem;
+}

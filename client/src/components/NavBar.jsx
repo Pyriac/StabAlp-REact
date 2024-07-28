@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Logo from "../assets/images/logo.png";
 import "../assets/styles/navBar.css";
@@ -15,11 +16,13 @@ export default function NavBar() {
   return (
     <header>
       {" "}
-      <img
-        className="logo"
-        src={Logo}
-        alt="Logo représentant deux toits de maisons stylisés en noir avec des fenêtres blanches, au-dessus d'une courbe bleue symbolisant une rivière"
-      />
+      <Link to={`/`}>
+        <img
+          className="logo"
+          src={Logo}
+          alt="Logo représentant deux toits de maisons stylisés en noir avec des fenêtres blanches, au-dessus d'une courbe bleue symbolisant une rivière"
+        />
+      </Link>
       <h1 className="Titre-Stab">Stab&apos; Alp</h1>
       <h3 className="Sous-titre-nav">
         Laurent Pineau - Conseiller bâtiment d&apos;élevage depuis 1996
@@ -39,10 +42,18 @@ export default function NavBar() {
           </svg>
         </a>
         <div className={menuState}>
-          <a>Prestations</a>
-          <a>Innovations</a>
-          <a>Réalisation</a>
-          <a>Contact</a>
+          <Link to={`/prestations`}>
+            <a>Prestations</a>
+          </Link>
+          <Link to={`/innovations`}>
+            <a>Innovations</a>
+          </Link>
+          <Link to={`/realisations`}>
+            <a>Réalisation</a>
+          </Link>
+          <Link to={`/contact`}>
+            <a>Contact</a>
+          </Link>
         </div>
       </nav>
     </header>

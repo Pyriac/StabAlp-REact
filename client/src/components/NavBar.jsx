@@ -13,6 +13,12 @@ export default function NavBar() {
       setMenuState("menuNav");
     }
   };
+
+  const handleLogoClick = () => {
+    if (menuState === "menuNav-show") {
+      setMenuState("menuNav");
+    }
+  };
   return (
     <header>
       {" "}
@@ -24,7 +30,9 @@ export default function NavBar() {
         />
       </Link>
       <Link to={`/`}>
-        <h1 className="Titre-Stab">Stab&apos; Alp</h1>
+        <h1 onClick={handleLogoClick} className="Titre-Stab">
+          Stab&apos; Alp
+        </h1>
       </Link>
       <h3 className="Sous-titre-nav">
         Laurent Pineau - Conseiller bâtiment d&apos;élevage depuis 1996
@@ -45,16 +53,16 @@ export default function NavBar() {
         </a>
         <div className={menuState}>
           <Link to={`/prestations`}>
-            <a>Prestations</a>
+            <a onClick={handleMenuClick}>Prestations</a>
           </Link>
           <Link to={`/innovations`}>
-            <a>Innovations</a>
+            <a onClick={handleMenuClick}>Innovations</a>
           </Link>
           <Link to={`/realisations`}>
-            <a>Réalisation</a>
+            <a onClick={handleMenuClick}>Réalisation</a>
           </Link>
           <Link to={`/contact`}>
-            <a>Contact</a>
+            <a onClick={handleMenuClick}>Contact</a>
           </Link>
         </div>
       </nav>

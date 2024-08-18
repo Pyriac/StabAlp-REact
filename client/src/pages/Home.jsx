@@ -3,7 +3,7 @@ import Back from "../assets/images/background.webp";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <div className="mainContainer">
         <img
           className="home-image"
@@ -16,6 +16,6 @@ export default function Home() {
         Bâtiments <br />
         agricoles de montagne
       </h2>
-    </>
+    </main>
   );
 }

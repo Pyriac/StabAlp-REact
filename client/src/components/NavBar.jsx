@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Logo from "../assets/images/logo.png";
 import "../assets/styles/navBar.css";
@@ -12,15 +13,27 @@ export default function NavBar() {
       setMenuState("menuNav");
     }
   };
+
+  const handleLogoClick = () => {
+    if (menuState === "menuNav-show") {
+      setMenuState("menuNav");
+    }
+  };
   return (
     <header>
       {" "}
-      <img
-        className="logo"
-        src={Logo}
-        alt="Logo représentant deux toits de maisons stylisés en noir avec des fenêtres blanches, au-dessus d'une courbe bleue symbolisant une rivière"
-      />
-      <h1 className="Titre-Stab">Stab&apos; Alp</h1>
+      <Link to={`/`}>
+        <img
+          className="logo"
+          src={Logo}
+          alt="Logo représentant deux toits de maisons stylisés en noir avec des fenêtres blanches, au-dessus d'une courbe bleue symbolisant une rivière"
+        />
+      </Link>
+      <Link to={`/`}>
+        <h1 onClick={handleLogoClick} className="Titre-Stab">
+          Stab&apos; Alp
+        </h1>
+      </Link>
       <h3 className="Sous-titre-nav">
         Laurent Pineau - Conseiller bâtiment d&apos;élevage depuis 1996
       </h3>
@@ -39,10 +52,18 @@ export default function NavBar() {
           </svg>
         </a>
         <div className={menuState}>
-          <a>Prestations</a>
-          <a>Innovations</a>
-          <a>Réalisation</a>
-          <a>Contact</a>
+          <Link to={`/prestations`} onClick={handleMenuClick}>
+            <a>Prestations</a>
+          </Link>
+          <Link to={`/innovations`} onClick={handleMenuClick}>
+            <a>Innovations</a>
+          </Link>
+          <Link to={`/realisations`} onClick={handleMenuClick}>
+            <a>Réalisation</a>
+          </Link>
+          <Link to={`/contact`} onClick={handleMenuClick}>
+            <a>Contact</a>
+          </Link>
         </div>
       </nav>
     </header>

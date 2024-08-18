@@ -52,17 +52,17 @@ export default function NavBar() {
           </svg>
         </a>
         <div className={menuState}>
-          <Link to={`/prestations`}>
-            <a onClick={handleMenuClick}>Prestations</a>
+          <Link to={`/prestations`} onClick={handleMenuClick}>
+            <a>Prestations</a>
           </Link>
-          <Link to={`/innovations`}>
-            <a onClick={handleMenuClick}>Innovations</a>
+          <Link to={`/innovations`} onClick={handleMenuClick}>
+            <a>Innovations</a>
           </Link>
-          <Link to={`/realisations`}>
-            <a onClick={handleMenuClick}>Réalisation</a>
+          <Link to={`/realisations`} onClick={handleMenuClick}>
+            <a>Réalisation</a>
           </Link>
-          <Link to={`/contact`}>
-            <a onClick={handleMenuClick}>Contact</a>
+          <Link to={`/contact`} onClick={handleMenuClick}>
+            <a>Contact</a>
           </Link>
         </div>
       </nav>

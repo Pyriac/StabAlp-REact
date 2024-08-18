@@ -1,11 +1,5 @@
-main {
-  position: absolute;
-  z-index: 1;
-  top: 80px;
-}
-
 .mainContainer {
-  height: calc(100svh - 80px);
+  height: calc(100svh);
   width: 100vw;
   overflow: hidden;
   display: flex;
